@@ -2,15 +2,29 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <style>body{
-    
-    background-position: center
-    }
-    </style>
-    
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <!--<script>
+        function validation()
+        {
+            if (localStorage) {
+                form = document.forms["regform"];
+                var p = form["name"].value;
+                var q = form["email"].value;
+                var r = form["username"].value;
+                var s = form["password"].value;
+                var t = form["cpassword"].value;
+                //name validation
+                localStorage.setItem('Name', p);
+                localStorage.setItem('Email', q);
+                localStorage.setItem('Username', r);
+                localStorage.setItem('Password', s);
+                localStorage.setItem('cPassword', t);
+                return true;
+            }
+        }
+    </script>-->
 
     <script type="text/javascript">
         function store(){
@@ -65,25 +79,32 @@
 
     </script>
 
+    <!-- Website CSS style -->
+    <link rel="stylesheet" type="text/css" href="CSS/Main.css">
+
     <!-- Website Font style -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
     <title>Register Page</title>
 </head>
-<body background="car.jpeg">
+<body>
 <div class="container">
     <div class="row main">
         <div class="panel-heading">
             <div class="panel-title text-center">
-                <h1 class="title">KC Easy Cars</h1>
-                <hr/>
+                <h1 class="title"> KC EasyCars</h1>
+                <hr />
             </div>
         </div>
         <div class="main-login main-center">
             <form class="form-horizontal" method="post"  name="form">
                 <div class="login-register">
-            
-            
+                    Seller?<a href="DoctorRegister.html">Register Here</a>
+                </div>
                 <div class="form-group">
                     <label for="name" class="cols-sm-2 control-label">Your Name</label>
                     <div class="cols-sm-10">
@@ -145,6 +166,6 @@
         </div>
     </div>
 </div>
-
+<!-- <script type="text/javascript" src="assets/js/bootstrap.js"></script> -->
 </body>
 </html>
