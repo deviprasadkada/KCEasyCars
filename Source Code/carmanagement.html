@@ -52,21 +52,25 @@
                 <div class="featured-content">
                     <div class="row-fluid">
                         <div class="span5 offset1">
-                            <div class="block">
-                                <h1>We are on a goal to make humans lives easier</h1>
-                                <br>
-                                <h2>Our mission at KCEASY CARS is to be your ultimate online solution for buying and selling new, certified and used cars. Our site is designed to give you more control of the buying process and make finding a vehicle easier than ever before.</h2>
-                                <a href="#" class="btn">more info</a>
-                            </div>
-                        </div>
-                        <div class="span5">
-                            <div class="block-content">
-                                <h3> KCEasy Cars lets you research and compare new, certified and used cars by searching for body type, mileage, price and numerous other criteria. Our Lifestyle Centers allow you to locate vehicles that meet your needs and compare them side by side</h3>
-                                
-                                
-                                <p class="last"></p>
-                            </div>
-                        </div>
+                            <button class="btn" onclick="openCity('dmvregistration')">DMV Registration</button><br/>
+  <button class="btn" onclick="openCity('insurance')">Apply for Insurance</button><br/>
+  <button class="btn" onclick="openCity('reporting')">Reporting and Handling Claims</button>
+
+<div id="dmvregistration" class="w3-container city">
+    <h2>DMV Registration</h2>
+    <iframe src="https://driving-tests.org/dmv-near-me/" height="720px" width="1080px"></iframe>
+</div>
+
+<div id="insurance" class="w3-container city">
+  <h2>Apply for Insurance</h2>
+  <iframe src="https://www.w3schools.com/html/html_layout.asp" height="720px" width="1080px"></iframe>
+</div>
+
+<div id="reporting" class="w3-container city">
+  <h2>Reporting and Handling Claims</h2>
+  <iframe src="https://www.thebalance.com/filing-auto-insurance-claim-2645925" height="720px" width="1080px"></iframe>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -75,14 +79,23 @@
                     Copyright(c) website name.  <strong>Designed by:<a href="http://www.kceasycasrs.com">www.kceasycars.com</a> </strong>
                 </div>
             </div>
-            
+
        <script src="js/jquery-1.9.1.js"></script> 
 <script src="js/bootstrap.js"></script>
 <script>
 $('#myCarousel').carousel({
     interval: 1800
 });
+    
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+}
 </script>
 
-    </body>
+</body>
 </html>
