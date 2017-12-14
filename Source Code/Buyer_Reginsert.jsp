@@ -4,7 +4,7 @@
 Connection con;
 Statement st;
 ResultSet rs;
-int sid;
+int bid;
 %>
 <%
 String name = request.getParameter("name");
@@ -15,17 +15,17 @@ try{
 con= databasecon.getconnection();
 st=con.createStatement();
 Statement st2=con.createStatement();
-ResultSet  rs2=st2.executeQuery("select * from seller_reg  where s_email='"+email+"' ");
+ResultSet  rs2=st2.executeQuery("select * from buyer_reg  where b_email='"+name+"' ");
 if(!rs2.next())
 	{
- rs=st.executeQuery("select max(s_id) from seller_reg");
+ rs=st.executeQuery("select max(b_id) from buyer_reg");
 rs.next();
 	
-sid=rs.getInt(1);
-++sid;
+bid=rs.getInt(1);
+++bid;
 
-PreparedStatement ps=con.prepareStatement("insert into seller_reg values(?,?,?,?,?,?,?)");
-ps.setInt(1, sid);
+PreparedStatement ps=con.prepareStatement("insert into buyer_reg values(?,?,?,?,?,?,?)");
+ps.setInt(1, bid);
 ps.setString(2, name);
 ps.setString(4, pass);
 ps.setString(3, email);
@@ -35,16 +35,14 @@ ps.setString(7, "Status");
 
 int i=ps.executeUpdate();
 if(i>0){
-response.sendRedirect("Seller_Registration.jsp?msg1=succ");
+response.sendRedirect("Buyer_Registration.jsp?msg1=succ");
 }else{
-response.sendRedirect("Seller_Registration.jsp?msg=unsucc");
+response.sendRedirect("Buyer_Registration.jsp?msg=unsucc");
 }
 	}
 	else{
-	response.sendRedirect("Seller_Registration.jsp?register=unsucc");
+	response.sendRedirect("Buyer_Registration.jsp?register=unsucc");
 	}
 }
-catch(Exception e){
-	e.printStackTrace();
-	}
+catch(Exception e){e.printStackTrace();}
 %>

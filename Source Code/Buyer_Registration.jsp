@@ -1,5 +1,5 @@
 <%@include file="Header.jsp"%>
-<style>
+    <style>
 body {
         background-color: #009999;
         
@@ -9,7 +9,7 @@ body {
         font-family: 'BebasNeue Regular';
     }
     </style>
-    <%
+<%
 String msg = request.getParameter("msg");
 if(msg != null){
 out.println("<script>alert('Registration Unsuccessfully..Please check once again..')</script>");
@@ -28,7 +28,7 @@ out.println("<script>alert('Email is Already registered..')</script>");
 <div id="content">
         <div class="content_item">
 		<br><br>		<br><br><br><br>
-<form action="Seller_Reginsert.jsp" method="post">
+<form action="Buyer_Reginsert.jsp" method="post">
 <table align="center">
 <tr><td colspan="3"><font size="6" color="orange"><b><u>Registration Form</u></b></font></td></tr>
 <tr><td><br></td></tr>

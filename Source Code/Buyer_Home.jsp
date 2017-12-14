@@ -1,9 +1,8 @@
 <%@page import="database.*,java.sql.*,java.util.*"%>
-<%@ include file="Seller_Header.jsp"%>
+    
+<%@ include file="Buyer_Header.jsp"%>
 
-
-<br><br>
-    <style>
+<style>
 body {
         background-color: #009999;
         
@@ -13,16 +12,16 @@ body {
         font-family: 'BebasNeue Regular';
     }
     </style>
+<br><br>
+
 <%
 Connection con = databasecon.getconnection();
 
 Statement st=con.createStatement();Statement st2=con.createStatement();
-ResultSet r=st.executeQuery("select * from seller_reg  where s_email='"+semail+"'  ");
+ResultSet r=st.executeQuery("select * from buyer_reg  where b_email='"+bemail+"'  ");
 if(r.next())
 	{
-
 %>
-<body>
 
 <div class="allcontain">
 	<div class="contact">
@@ -32,9 +31,9 @@ if(r.next())
 					<div class="contact-form">
 						<h1>Person Details</h1>
 							<div class="form-group group-coustume">
-								<input type="text" class="form-control name-form" value="<%=r.getString("s_name")%>"readonly>
-								<input type="text" class="form-control email-form"  value="<%=r.getString("s_email")%>"readonly>
-								<input type="text" class="form-control subject-form"  value="<%=r.getString("s_mno")%>"readonly>
+								<input type="text" class="form-control name-form" value="<%=r.getString("b_name")%>"readonly>
+								<input type="text" class="form-control email-form"  value="<%=r.getString("b_email")%>"readonly>
+								<input type="text" class="form-control subject-form"  value="<%=r.getString("b_mno")%>"readonly>
 							
 							</div>
 					</div>
@@ -47,7 +46,7 @@ if(r.next())
 
 <%}else{
 
-System.out.println("Seller_Home");
+System.out.println("Buyer_Home");
 }%>
 
 

@@ -9,20 +9,20 @@ try{
 Connection con = databasecon.getconnection();
 
 Statement st=con.createStatement();Statement st2=con.createStatement();
-ResultSet r=st.executeQuery("select * from seller_reg  where s_email='"+uname+"' and s_pass='"+pwd+"'  ");
+ResultSet r=st.executeQuery("select * from buyer_reg  where b_email='"+uname+"' and b_pass='"+pwd+"'  ");
 if(r.next())
 	{
 
-	email=r.getString("s_email");
-	name=r.getString("s_name");
-	session.setAttribute("semail",email);
-		session.setAttribute("sname",name);
-	response.sendRedirect("Seller_Home.jsp");
+	email=r.getString("b_email");
+		name=r.getString("b_name");
+	session.setAttribute("bemail",email);
+	session.setAttribute("bname",name);
+	response.sendRedirect("Buyer_Home.jsp");
 	
  }
    
  else{
- response.sendRedirect("Seller_Login.jsp?msg1=fail");
+ response.sendRedirect("Buyer_Login.jsp?msg1=fail");
 
    }
  

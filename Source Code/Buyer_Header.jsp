@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Seller Home </title>
+	<title>Buyer Home</title>
 	<meta name="description" content="Scarica gratis il nostro Template HTML/CSS GARAGE. Se avete bisogno di un design per il vostro sito web GARAGE può fare per voi. Web Domus Italia">
 	<meta name="author" content="Web Domus Italia">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,7 +12,12 @@
 	<link rel="stylesheet" type="text/css" href="style/slider.css">
 	<link rel="stylesheet" type="text/css" href="style/mystyle.css">
 	<link rel="stylesheet" type="text/css" href="font_style.css">
-		<link rel="stylesheet" type="text/css" href="style/contactstyle.css">
+	<link rel="stylesheet" type="text/css" href="style/contactstyle.css">
+
+
+
+
+
 </head>
 <body>
 <!-- Header -->
@@ -33,15 +38,15 @@
 		</div>
 		<div class="collapse navbar-collapse" id="upmenu">
 			<ul class="nav navbar-nav" id="navbarontop">
-				<li class="active"><a href="Seller_Home.jsp">HOME</a> </li>
+				<li class="active"><a href="Buyer_Home.jsp">HOME</a> </li>
 				<li>
-					<a href="Seller_CarSell.jsp"><button><span class="postnewcar">POST  A CAR</span></button></a>
+					<a href="Buyer_ViewCars.jsp">ViewCars</a>
 				</li>
-			<li>
-					<a href="Seller_Chating.jsp">View & Reply</a>
+				<li>
+					<a href="Chating.jsp">Chat</a>
 				</li>
 					<li>
-					<a href="Seller_Login.jsp">Logout</a>
+					<a href="Buyer_Login.jsp">Logout</a>
 				</li>
 			<!--	<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seller<span class="caret"></span></a>
@@ -71,9 +76,9 @@
 <!--_______________________________________ Carousel__________________________________ -->
 
 <%
-String semail=(String)session.getAttribute("semail");
-if(semail==null)
-{response.sendRedirect("Seller_Login.jsp?session=timeout");}
+String bemail=(String)session.getAttribute("bemail");
+if(bemail==null)
+{response.sendRedirect("Buyer_Login.jsp?session=timeout");}
 else{}
 %>
 

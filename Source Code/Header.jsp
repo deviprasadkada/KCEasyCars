@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Seller Home </title>
+	<title>Car Sales </title>
 	<meta name="description" content="Scarica gratis il nostro Template HTML/CSS GARAGE. Se avete bisogno di un design per il vostro sito web GARAGE può fare per voi. Web Domus Italia">
 	<meta name="author" content="Web Domus Italia">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,7 +12,6 @@
 	<link rel="stylesheet" type="text/css" href="style/slider.css">
 	<link rel="stylesheet" type="text/css" href="style/mystyle.css">
 	<link rel="stylesheet" type="text/css" href="font_style.css">
-		<link rel="stylesheet" type="text/css" href="style/contactstyle.css">
 </head>
 <body>
 <!-- Header -->
@@ -33,23 +32,24 @@
 		</div>
 		<div class="collapse navbar-collapse" id="upmenu">
 			<ul class="nav navbar-nav" id="navbarontop">
-				<li class="active"><a href="Seller_Home.jsp">HOME</a> </li>
-				<li>
-					<a href="Seller_CarSell.jsp"><button><span class="postnewcar">POST  A CAR</span></button></a>
+				<li class="active"><a href="index.html">HOME</a> </li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle"	data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seller <span class="caret"></span></a>
+					<ul class="dropdown-menu dropdowncostume">
+							<li><a href="Seller_Login.jsp">Login</a></li>
+						<li><a href="Seller_Registration.jsp">Registration</a></li>
+					</ul>
 				</li>
-			<li>
-					<a href="Seller_Chating.jsp">View & Reply</a>
-				</li>
-					<li>
-					<a href="Seller_Login.jsp">Logout</a>
-				</li>
-			<!--	<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seller<span class="caret"></span></a>
+				<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Buyer<span class="caret"></span></a>
 						<ul class="dropdown-menu dropdowncostume">
-								<li><a href=""></a></li>
-						<li><a href=""></a></li>
+								<li><a href="Buyer_Login.jsp">Login</a></li>
+						<li><a href="Buyer_Registration.jsp">Registration</a></li>
 						</ul>
-				</li>-->
+				</li>
+		<li>
+					<a href="Management.jsp">Car Management</a>
+				</li>
 				
 			<!--	<button><span class="postnewcar">POST NEW CAR</span></button>-->
 			</ul>
@@ -70,12 +70,7 @@
 </div>
 <!--_______________________________________ Carousel__________________________________ -->
 
-<%
-String semail=(String)session.getAttribute("semail");
-if(semail==null)
-{response.sendRedirect("Seller_Login.jsp?session=timeout");}
-else{}
-%>
+
 
 	<!-- ______________________________________________________Bottom Menu ______________________________-->
 	
